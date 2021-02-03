@@ -23,101 +23,157 @@ body {
   font-family: "Spartan", sans-serif;
 }
 
-.main {
-  text-align: center;
-  position: relative;
-
-  .bg-top {
-    .top {
-      position: absolute;
-      top: -65px;
-      left: -25px;
-    }
+@media only screen and (min-width: 1200px) {
+  body {
+    width: 80%;
+    margin: auto;
   }
 
-  .description {
-    margin: 2em;
-    h1 {
-      color: $darkMagenta;
-      font-size: 1.87em;
-      font-weight: 700;
-      margin-top: 2em;
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .bg-top {
+      .top {
+        width: 700px;
+      }
     }
-    p {
-      color: $darkGrayishMagenta;
-      font-size: 0.92rem;
-      margin-top: 1.5em;
-      line-height: 1.5em;
-    }
-  }
 
-  .ratings {
-    margin: 2em;
-    .rating-container {
-      background-color: $lightGrayishMagenta;
-      margin-bottom: 1em;
-      border-radius: 5px;
-      .rating {
-        padding: 1em;
-        h3 {
-          color: $darkMagenta;
-          font-size: 0.9em;
-          margin-top: 0.5em;
+    .description {
+      text-align: left;
+      width: 450px;
+      .headline {
+        font-size: 3.5em;
+        letter-spacing: -3px;
+        line-height: 100%;
+      }
+      .headline-text {
+        font-size: 1em;
+        margin-top: 1em;
+      }
+    }
+
+    .ratings {
+      display: flex;
+      flex-direction: column;
+      margin: 4em;
+      .rating-container {
+        display: flex;
+        .rating {
+          display: flex;
+          img {
+            object-fit: contain;
+            margin-right: 0.6em;
+          }
         }
-        img {
-          margin-right: 0.3em;
-        }
+      }
+      .rating-container:nth-child(2) {
+        margin-left: 2em;
+      }
+      .rating-container:nth-child(3) {
+        margin-left: 4em;
       }
     }
   }
 }
 
-.cards {
-  margin-bottom: 2em;
-  .review {
-    background-color: $darkMagenta;
-    color: white;
-    margin: 1em 1.5em;
-    border-radius: 10px;
-    padding: 2.5em;
-    font-size: 0.87rem;
-    line-height: 1.7em;
+@media only screen and (min-width: 300px) {
+  .main {
+    text-align: center;
+    position: relative;
 
-    .profile {
-      display: flex;
-      .picture {
-        border-radius: 50%;
-        width: 40px;
-        margin-right: 2em;
-      }
-      .info {
-        margin-top: 0.25em;
-        h3 {
-          margin-top: -3px;
-          font-size: 1em;
-        }
-        .name {
-          font-weight: 500;
-        }
-        .status {
-          color: $softPink;
-          font-weight: 400;
-        }
+    .bg-top {
+      .top {
+        position: absolute;
+        top: -70px;
+        left: -25px;
       }
     }
-    p {
-      margin-top: 1em;
+
+    .description {
+      margin: 2em;
+      h1 {
+        color: $darkMagenta;
+        font-size: 1.87em;
+        font-weight: 700;
+        margin-top: 2em;
+      }
+      p {
+        color: $darkGrayishMagenta;
+        font-size: 0.92rem;
+        margin-top: 1.5em;
+        line-height: 1.5em;
+      }
+    }
+
+    .ratings {
+      margin: 2em;
+      .rating-container {
+        background-color: $lightGrayishMagenta;
+        margin-bottom: 1em;
+        border-radius: 5px;
+        .rating {
+          padding: 1em;
+          h3 {
+            color: $darkMagenta;
+            font-size: 0.9em;
+            margin-top: 0.5em;
+          }
+          img {
+            margin-right: 0.3em;
+          }
+        }
+      }
     }
   }
-  footer {
-    text-align: center;
-    margin: 2.5em 1.5em;
-    font-size: 0.98em;
-    line-height: 1.75em;
-    a {
-      color: $darkMagenta;
-      font-weight: 700;
-      text-decoration: none;
+
+  .cards {
+    margin-bottom: 2em;
+    .review {
+      background-color: $darkMagenta;
+      color: white;
+      margin: 1em 1.5em;
+      border-radius: 10px;
+      padding: 2.5em;
+      font-size: 0.87rem;
+      line-height: 1.7em;
+
+      .profile {
+        display: flex;
+        .picture {
+          border-radius: 50%;
+          width: 40px;
+          margin-right: 2em;
+        }
+        .info {
+          margin-top: 0.25em;
+          h3 {
+            margin-top: -3px;
+            font-size: 1em;
+          }
+          .name {
+            font-weight: 500;
+          }
+          .status {
+            color: $softPink;
+            font-weight: 400;
+          }
+        }
+      }
+      p {
+        margin-top: 1em;
+      }
+    }
+    footer {
+      text-align: center;
+      margin: 2.5em 1.5em;
+      font-size: 0.98em;
+      line-height: 1.75em;
+      a {
+        color: $darkMagenta;
+        font-weight: 700;
+        text-decoration: none;
+      }
     }
   }
 }
