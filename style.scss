@@ -35,9 +35,27 @@ body {
     position: relative;
   }
 
+  .desktop-top {
+    position: absolute;
+    background-color: beige;
+  }
+  .desktop-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: cadetblue;
+  }
+  .mobile-top {
+    display: none;
+  }
+  .mobile-bottom {
+    display: none;
+  }
+
   .main {
-    display: flex !important;
-    justify-content: space-between !important;
+    display: flex;
+    justify-content: space-between;
+
     .description {
       text-align: left;
       width: 450px;
@@ -57,7 +75,7 @@ body {
     .ratings {
       display: flex;
       flex-direction: column;
-      margin: 4em 1.5em 1.5em 1.5em !important;
+      margin: 6em 1.5em 1.5em 1.5em !important;
       width: 540px;
       .rating-container {
         display: flex;
