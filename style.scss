@@ -21,31 +21,32 @@ $lightGrayishMagenta: hsl(300, 24%, 96%);
 
 body {
   font-family: "Spartan", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   body {
-    width: 80%;
+    width: 1200px;
     margin: auto;
+    position: relative;
   }
 
   .main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .bg-top {
-      .top {
-        width: 700px;
-      }
-    }
-
+    display: flex !important;
+    justify-content: space-between !important;
     .description {
       text-align: left;
       width: 450px;
+      margin: 0em 1.5em !important;
       .headline {
         font-size: 3.5em;
         letter-spacing: -3px;
         line-height: 100%;
+        margin-top: 1em !important;
       }
       .headline-text {
         font-size: 1em;
@@ -56,45 +57,67 @@ body {
     .ratings {
       display: flex;
       flex-direction: column;
-      margin: 4em;
+      margin: 4em 1.5em 1.5em 1.5em !important;
+      width: 540px;
       .rating-container {
         display: flex;
+        margin-bottom: 1.2em !important;
+        border-radius: 10px !important;
         .rating {
           display: flex;
+          padding: 1.1em 2em !important;
           img {
             object-fit: contain;
-            margin-right: 0.6em;
+            margin-right: 0.5em !important;
+          }
+          h3 {
+            margin-left: 2em !important;
           }
         }
       }
+      .rating-container:nth-child(1) {
+        margin-right: 6em;
+      }
       .rating-container:nth-child(2) {
-        margin-left: 2em;
+        margin-left: 3em;
+        margin-right: 3em;
       }
       .rating-container:nth-child(3) {
-        margin-left: 4em;
+        margin-left: 6em;
       }
     }
   }
+
+  .cards {
+    display: flex;
+    .review {
+      height: 232px;
+      padding: 36px 33px !important;
+      margin: 1.3em !important;
+    }
+    .review:nth-child(2) {
+      margin-top: 3em !important;
+    }
+    .review:nth-child(3) {
+      margin-top: 4.5em !important;
+    }
+  }
+  footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width: 300px) {
+@media screen and (min-width: 300px) {
   .main {
     text-align: center;
-    position: relative;
-
-    .bg-top {
-      .top {
-        position: absolute;
-        top: -70px;
-        left: -25px;
-      }
-    }
 
     .description {
       margin: 2em;
       h1 {
         color: $darkMagenta;
-        font-size: 1.87em;
+        font-size: 1.9em;
         font-weight: 700;
         margin-top: 2em;
       }
@@ -107,7 +130,7 @@ body {
     }
 
     .ratings {
-      margin: 2em;
+      margin: 2.5em 2em;
       .rating-container {
         background-color: $lightGrayishMagenta;
         margin-bottom: 1em;
@@ -128,13 +151,12 @@ body {
   }
 
   .cards {
-    margin-bottom: 2em;
     .review {
       background-color: $darkMagenta;
       color: white;
       margin: 1em 1.5em;
       border-radius: 10px;
-      padding: 2.5em;
+      padding: 36px 34px;
       font-size: 0.87rem;
       line-height: 1.7em;
 
@@ -162,18 +184,19 @@ body {
       }
       p {
         margin-top: 1em;
+        font-size: 13px;
       }
     }
-    footer {
-      text-align: center;
-      margin: 2.5em 1.5em;
-      font-size: 0.98em;
-      line-height: 1.75em;
-      a {
-        color: $darkMagenta;
-        font-weight: 700;
-        text-decoration: none;
-      }
+  }
+  footer {
+    text-align: center;
+    margin: 1em 1.5em;
+    font-size: 0.98em;
+    line-height: 1.75em;
+    a {
+      color: $darkMagenta;
+      font-weight: 700;
+      text-decoration: none;
     }
   }
 }
