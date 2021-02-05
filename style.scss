@@ -22,6 +22,7 @@ $lightGrayishMagenta: hsl(300, 24%, 96%);
 body {
   font-family: "Spartan", sans-serif;
   overflow-x: hidden;
+  position: relative;
   .container {
     display: flex;
     flex-direction: column;
@@ -30,6 +31,25 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .mobile-top,
+  .mobile-bottom {
+    display: none !important;
+  }
+
+  .desktop-top {
+    display: block !important;
+    position: absolute;
+    width: 770px;
+    top: 0;
+    left: 0;
+  }
+  .desktop-bottom {
+    display: block !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
   .container {
     width: 1200px;
     margin: auto;
@@ -116,6 +136,24 @@ body {
 }
 
 @media screen and (min-width: 300px) {
+  .desktop-top,
+  .desktop-bottom {
+    display: none;
+  }
+
+  .mobile-top {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -70px;
+  }
+  .mobile-bottom {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+  }
+
   .container {
     justify-content: flex-start;
   }
